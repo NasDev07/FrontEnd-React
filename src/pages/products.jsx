@@ -16,7 +16,7 @@ const Products = [
     description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
   },
   {
-    id: 2,
+    id: 3,
     name: "Sepatu Nike",
     price: "Rp. 700.000",
     image: "/images/shoes-1.jpg",
