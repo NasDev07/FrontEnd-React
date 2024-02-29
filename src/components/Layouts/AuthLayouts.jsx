@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const AuthLayouts = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { children, title } = props;
+  const { children, title, type } = props;
   return (
     <div className="flex justify-center min-h-screen items-center">
       <div className="w-full max-w-xs">
@@ -10,9 +12,50 @@ const AuthLayouts = (props) => {
         </p>
 
         {children}
+        {/* <Navigation type={type} /> */}
+        <p className="text-sm mt-5 text-center">
+          {type === "login"
+            ? "Don't have an account? "
+            : "Already have an account? "}
+          &nbsp;&nbsp;
+          {type === "login" && (
+            <Link to="/register" className="font-bold text-blue-600">
+              Register
+            </Link>
+          )}
+          {type === "register" && (
+            <Link to="/login" className="font-bold text-blue-600">
+              Login
+            </Link>
+          )}
+        </p>
       </div>
     </div>
   );
 };
+
+// bisa juga menggunakan if else
+// eslint-disable-next-line react/prop-types
+// const Navigation = ({ type }) => {
+//   if (type === "login") {
+//     return (
+//       <p className="text-sm mt-3 text-center">
+//         Don't have an account?
+//         <Link to="/register" className="font-bold text-blue-600">
+//           Register
+//         </Link>
+//       </p>
+//     );
+//   } else {
+//     return (
+//       <p className="text-sm mt-3 text-center">
+//         Already have an account?
+//         <Link to="/login" className="font-bold text-blue-600">
+//           Login
+//         </Link>
+//       </p>
+//     );
+//   }
+// };
 
 export default AuthLayouts;
