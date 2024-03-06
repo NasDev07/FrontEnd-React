@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import CardProduct from "../components/Fragments/CardProduct";
 import Button from "../components/Elemtnts/Button";
+import Counter from "../components/Fragments/Counter";
 
 const Products = [
   {
@@ -120,6 +121,9 @@ const ProductsPage = () => {
             </tbody>
           </table>
         </div>
+      </div>
+      <div className="mt-5 flex justify-center mb-5">
+        <Counter></Counter>
       </div>
     </Fragment>
   );
