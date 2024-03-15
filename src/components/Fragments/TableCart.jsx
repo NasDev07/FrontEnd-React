@@ -87,10 +87,12 @@ const TableCart = (props) => {
           <td>
             <b>
               ${" "}
-              {total.toLocaleString("id-ID", {
-                styles: "currency",
-                currency: "USD",
-              })}
+              {total
+                ? total.toLocaleString("id-ID", {
+                    styles: "currency",
+                    currency: "USD",
+                  })
+                : "Loading..."}
             </b>
           </td>
         </tr>

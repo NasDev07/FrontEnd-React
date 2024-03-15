@@ -44,9 +44,6 @@ const ProductsPage = () => {
           <TableCart products={products} />
         </div>
       </div>
-      {/* <div className="mt-5 flex justify-center mb-5">
-        <Counter></Counter>
-      </div> */}
     </Fragment>
   );
 };
