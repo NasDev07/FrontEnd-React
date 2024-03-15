@@ -8,7 +8,7 @@ import { DarkMode } from "../context/DarkMode";
 
 const ProductsPage = () => {
   // Untuk dark mode menggunakan createContext
-  const { isDarkMode, setIsDarkMode } = useContext(DarkMode);
+  const { isDarkMode } = useContext(DarkMode);
 
   const [products, setProducts] = useState([]);
   useLogin();
